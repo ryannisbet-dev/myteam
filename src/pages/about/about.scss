@@ -1,0 +1,147 @@
+// Import common styles
+@import '../../styles/common.scss';
+
+.about {
+    &__hero {
+        text-align: center;
+        padding: 2rem;
+        padding-block-end: 6rem;;
+        background: url('../../assets/bg-pattern-about-1-mobile-nav-1.svg') 150% 130% no-repeat;
+    }
+
+    &__clients {
+        display: flex;
+        flex-direction: column;
+        background: $dark-green url('../../assets/bg-pattern-about-4.svg') -60% -20% no-repeat;
+        gap: 2rem;
+        padding-block: 5rem;
+        text-align: center;
+    }
+
+    &__heading {
+        font-size: 2.25rem;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 1.25rem;
+    }
+
+    &__directors {
+        background-color: $deep-jungle-green;
+        background-image: url('../../assets/bg-pattern-home-4-about-3.svg'), url('../../assets/bg-pattern-about-2-contact-1.svg');
+        background-position: bottom right, -60%  -5.5%;
+        background-repeat: no-repeat, no-repeat;
+        padding-block: 2rem 5rem;
+    }
+}
+
+.clients {
+    &__logos {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    &__logo {
+        width: calc(100% - 8rem);
+    }
+}
+
+// Tablet styles
+@media only screen and (min-width: 768px) {
+
+    .about {
+
+        &__hero {
+            background-position: 110% 100%;
+            padding-inline: 4rem;
+            padding-block-end: 10rem;
+        }
+
+        &__heading {
+            font-size: 4rem;
+        }
+    
+        &__text {
+            font-size: 1.75rem;
+        }
+
+        &__directors {
+            background-position: bottom right, -10%  0%;
+        }
+
+        &__clients {
+            background-position: 0 -50%;
+        }
+    }
+
+    .clients {
+        &__logos {
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+    
+        &__logo {
+            width: 125px;
+        }
+    }
+    
+    .directors {
+        &__cards {
+            display: flex; 
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        &__card {
+            width: 400px;
+        }
+    }
+}
+
+// Large desktop styles
+@media only screen and (min-width: 1601px) {
+    .about {
+        &__hero {
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+            align-items: center;
+            background-size: 10%;
+            background-position: 105% 100%;
+        }
+
+        &__heading {
+            font-size: 5rem;
+        }
+
+        &__text {
+            position: relative;
+            font-size: 2.5rem;
+
+            &::before {
+                content: '';
+                width: 5rem;
+                height: 0.5rem;
+                background-color: $coral;
+                margin: 1rem auto 0;
+                position: absolute;
+                inset-block-start: -3rem;
+            }
+        }
+
+        &__directors,
+        &__clients {
+            background-position: top left;
+        }
+    }
+
+    .clients {   
+        &__logo {
+            width: 250px;
+        }
+    }
+}

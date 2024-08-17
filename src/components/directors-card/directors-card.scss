@@ -1,0 +1,70 @@
+// Import common styles
+@import '../../styles/common.scss';
+
+.directors {
+    
+    &__card {
+        background-color: $sacramento-green;
+        margin: 1rem;
+        margin-block-end: 3rem;
+        text-align: center;
+        padding: 1rem;
+        height: 300px;
+        position: relative;
+    }
+
+    &__img {
+        border-radius: 50%;
+        border: 4px solid $white;
+        width: 150px;
+    }
+
+    &__name {
+        color: $rapture-blue;
+    }
+
+    &__btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        inset-block-end: -2rem;
+        border-radius: 50%;
+        height: 75px;
+        width: 75px;
+        background-color: $coral;
+        border: 0;
+        color: $sacramento-green;
+        font-size: 2rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        &.close {
+            background-color: $rapture-blue;
+        }
+    }
+
+    &__quote {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    &__social {
+        padding: 1rem;
+    }
+}
+
+
+// Large desktop styles
+@media only screen and (min-width: 1601px) {
+    .directors {
+        &__card {
+            width: 400px;
+            height: 400px;
+            padding: 2rem;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+        }
+    }
+}

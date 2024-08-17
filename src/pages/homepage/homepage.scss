@@ -1,0 +1,215 @@
+// Import common styles
+@import '../../styles/common.scss';
+
+// Homepage styles
+.homepage {
+    &__hero {
+        padding: 3rem 1rem 10rem;
+        text-align: center;
+        background: url('../../assets/bg-pattern-home-2.svg') no-repeat bottom center;
+    }
+
+    &__build {
+        background-color: $sacramento-green;
+        background-image: url('../../assets/bg-pattern-home-3.svg');
+        background-repeat: no-repeat;
+        background-position: 150% 0;
+        padding: 10rem 1rem 3rem;
+
+        .heading {
+            margin-block-end: 3rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 5rem;
+                height: 0.5rem;
+                background-color: $coral;
+                margin: 1rem auto 0;
+                position: absolute;
+                inset-block-start: -3rem;
+            }
+        }
+    }
+
+    &__stories {
+        padding: 6rem 1rem 10rem;
+        text-align: center;
+        background: url('../../assets/bg-pattern-home-5.svg') no-repeat bottom right,
+                    url('../../assets/bg-pattern-home-4-about-3.svg') no-repeat top left;
+    }
+}
+
+// Hero styles
+.hero {
+    &__heading {
+        font-size: 7rem;
+    }
+}
+
+// Build styles
+.build {
+    &__card {
+        text-align: center;
+        margin-block: 2rem;
+    }
+
+    &__textWrap {
+        flex-shrink: 0;
+        font-size: 1.25rem;
+        width: calc(100% - 7rem);
+    }
+    
+    &__icon {
+        min-width: 100px;
+    }
+}
+
+// Stories styles
+.stories {
+    &__name {
+        color: $rapture-blue;
+        font-size: 1.75rem;
+        margin-block: .5rem;
+    }
+
+    &__img {
+        border-radius: 50%;
+        border: 4px solid $rapture-blue;
+        width: 120px;
+    }
+
+    &__title {
+        font-size: 1.15rem;
+    }
+
+    &__card {
+        margin-block: 5rem 0;
+        background: url('../../assets/icon-quotes.svg') no-repeat;
+        background-size: 20%;
+        background-position: 50% 0;
+    }
+
+    &__text {
+        font-size: 1.15rem;
+    }
+}
+
+// Tablet styles
+@media only screen and (min-width: 768px) {
+    .homepage {
+        &__hero {
+            padding: 0 10rem 7rem;
+            background-position: 50% 100%;
+        }
+
+        &__build {
+            background-position: 110% 0;
+            background-size: 20%;
+            padding: 5rem 10rem 7rem;
+
+            .heading {
+                font-size: 3rem;
+            }
+        }
+
+        &__stories {
+            padding: 5rem 10rem 7rem;
+        }
+    }
+
+    .hero {
+        &__text {
+            font-size: 2rem;
+        }
+
+        &__heading {
+            font-size: 5rem;
+        }
+    }
+
+    .build {
+        &__card {
+            display: flex;
+            gap: 2rem;
+            text-align: left;
+            align-items: center;
+        }
+    }
+}
+
+// Large desktop styles
+@media only screen and (min-width: 1601px) {
+    .homepage {
+        &__hero,
+        &__build {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &__hero {
+            text-align: left;
+            align-items: center;
+            background: url('../../assets/bg-pattern-home-2.svg') no-repeat bottom right, url('../../assets/bg-pattern-home-1.svg') no-repeat -5% 10%;
+            padding: 5rem 10rem 15rem;
+        }
+
+        &__build {
+            background-size: 10%;
+            background-position: 105% 100%;
+            gap: 5rem;
+
+            .heading {
+                font-size: 5rem;
+                width: 50%;
+            }
+        }
+
+        &__stories {
+            background-size: 10%;
+        }
+    }
+
+    .hero {
+        &__heading {
+            font-size: 8rem;
+        }
+
+        &__text {
+            width: 50%;
+            font-size: 2.5rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 5rem;
+                height: 0.5rem;
+                background-color: $rapture-blue;
+                margin: 1rem auto 0;
+                position: absolute;
+                inset-block-start: -3rem;
+            }
+        }
+    }
+
+    .build {
+        &__textWrap {
+            font-size: 2rem;
+        }
+    }
+
+    .stories {
+        &__cards {
+            display: flex;
+            gap: 3rem;
+        }
+
+        &__text {
+            font-size: 2rem;
+        }
+
+        &__heading {
+            font-size: 5rem;
+        }
+    }
+}
